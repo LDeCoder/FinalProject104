@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Spring Security Example</title>
+<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+   <nav>
+        <div>
+            <a th:href="@{/}"><b>Home</b></a>
+        </div>
+        <div>
+            <a th:href="@{/membersOnly}">Members ONLY</a>
+        </div>
+        <div>
+            <a th:href="@{/login}">Login</a>
+        </div>
+    </nav>
+    <h1>Welcome to the Home Page!</h1>
+    <h3>You can decide to become a "member" or simply a user.</h3>
+    <ul>
+    <li>Users are only able to view posts.</li>
+    <li>Members have full access and are able to Create Read Update Delete.</li>
+    <li>To become a Member, simply create a UserName and Password</li>
+    <li>Check out the messages below to see if you might like to add one yourself!</li>
+    </ul> -->
+    
+    <h1>POSTED MESSAGES SHOULD APPEAR BELOW:</h1>
+    
+<h1>Hello Ninjas!</h1>
+<form action="#" th:action="@{/post}" th:object="${post}" method="post" >
+<!-- <input th:field=*{id}> -->
+<input th:field="*{authorID}" placeholder="Your Name, Author" />
+<input th:field="*{message}" placeholder="Enter message here" />
+<button >Submit New Message</button>
+</form>
+</body>
+</html>
+    
+    
+    
+</body>
+</html>
